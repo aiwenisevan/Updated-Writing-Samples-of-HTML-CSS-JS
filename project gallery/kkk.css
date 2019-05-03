@@ -1,0 +1,108 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+		background:white;
+		display: flex;
+		flex-direction: column;
+	
+		algin-items: center;
+		justify-content: center;
+	}
+
+	#canvas {
+		margin-left: 600px;
+		margin-top: 300px;
+		position: fixed;
+		background:#AEE4FF;
+	}
+
+
+	.img{
+	  margin-top:600px;
+	  margin-left: 600px;
+	  position: fixed;
+	}
+	#button0{
+		width:200px;
+		height:40px;
+		background:#FFA073;
+		position:fixed;
+		margin-top:260px;
+		margin-left:0px;
+		font-family:'Exo 2', sans-serif;
+		font-size:18px;
+		
+	}
+	#button1{
+		width:250px;
+		height:40px;
+		background:#FFF;
+		position:fixed;
+		margin-top:300px;
+		margin-left:0px;
+		font-family: 'Exo 2', sans-serif;
+		font-size:18px;
+		
+	}
+	#button2{
+		width:270px;
+		height:50px;
+		background:#FCC;
+		position:fixed;
+		margin-top:340px;
+		margin-left:0px;
+		font-family: 'Exo 2', sans-serif;
+		font-size:18px;
+		
+	}
+	#button3{
+		width:220px;
+		height:50px;
+		background:#FC6;
+		position:fixed;
+		margin-top:410px;
+		margin-left:0px;
+		font-family: 'Exo 2', sans-serif;
+		font-size:18px;
+		
+	}
+	#position{
+		width:420px;
+		height:30px;
+		background:#B0B0FF;
+		position:fixed;
+		margin-top:400px;
+		margin-left:0px;
+		font-family: 'Exo 2', sans-serif;
+		font-size:18px;
+		
+	}
+	#button0:hover{
+		width:340px;
+		
+	}
+	#button1:hover{
+		width:340px;
+		
+	}
+	#button2:hover{
+		width:340px;
+		
+	}
+	#button3:hover{
+		width:340px;
+		
+	}
+	#img1{
+		margin-top:320px;
+		margin-left:250px;
+		position:fixed;
+		
+	}
+	#gif{
+		margin-top:450px;
+	  	margin-left: 600px;
+	  	position: fixed;
+		border:hidden;
+	}

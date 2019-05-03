@@ -1,0 +1,130 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+		background:#AEE4FF;
+		font-family: 'Exo 2', sans-serif;
+	}
+	#button0{
+		width:200px;
+		height:40px;
+		background:#FFA073;
+		position:fixed;
+		margin-top:260px;
+		margin-left:0px;
+		font-family:'Exo 2', sans-serif;
+		font-size:18px;
+		
+	}
+	#button1{
+		width:250px;
+		height:40px;
+		background:#FFF;
+		position:fixed;
+		margin-top:300px;
+		margin-left:0px;
+		font-family: 'Exo 2', sans-serif;
+		font-size:18px;
+		
+	}
+	#button2{
+		width:270px;
+		height:50px;
+		background:#FCC;
+		position:fixed;
+		margin-top:370px;
+		margin-left:0px;
+		font-family: 'Exo 2', sans-serif;
+		font-size:18px;
+		
+	}
+	#button3{
+		width:220px;
+		height:50px;
+		background:#FC6;
+		position:fixed;
+		margin-top:420px;
+		margin-left:0px;
+		font-family: 'Exo 2', sans-serif;
+		font-size:18px;
+		
+	}
+	#position{
+		width:350px;
+		height:30px;
+		background:#B0B0FF;
+		position:fixed;
+		margin-top:340px;
+		margin-left:0px;
+		font-family: 'Exo 2', sans-serif;
+		font-size:18px;
+		
+	}
+	#button0:hover{
+		width:340px;
+		
+	}
+	#button1:hover{
+		width:340px;
+		
+	}
+	#button2:hover{
+		width:340px;
+		
+	}
+	#button3:hover{
+		width:340px;
+		
+	}
+	#img1{
+		margin-top:190px;
+		margin-left:200px;
+		position:fixed;
+		
+	}
+	#frame1{
+		width:460px;
+		height:410px;
+		margin-left:570px;
+		margin-top: 220px;
+		position:fixed;
+		background:url(IMG_1497.JPG)
+	}
+	
+	#h6{
+		margin-left:600px;
+		margin-top: 250px;
+		position:fixed;
+		
+	}
+	#button4{
+		width:83px;
+		height:55px;
+		background:url(next.png) no-repeat;
+		margin-left:1050px;
+		margin-top: 390px;
+		position:fixed;
+	}
+	#button5{
+		width:83px;
+		height:55px;
+		background:url(last.png) no-repeat;
+		margin-left:450px;
+		margin-top: 390px;
+		position:fixed;
+	}
+	p1{
+		margin-left:1070px;
+		margin-top: 450px;
+		position:fixed;
+	}
+	p2{
+		margin-left:470px;
+		margin-top: 460px;
+		position:fixed;
+	}
+	p3{
+		margin-left:600px;
+		margin-top: 640px;
+		position:fixed;
+	}
