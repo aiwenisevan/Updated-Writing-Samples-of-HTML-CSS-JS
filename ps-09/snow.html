@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Snow</title>
+<style media="screen">
+body{
+	font-family: 'Anton', sans-serif;
+	background:#CCF;
+	font-weight:bold;
+	}
+#button1{
+	width:200px;
+	height:200px;
+	background:url(lala.jpg);
+	background-position:top;
+	margin-left:100px;
+	margin-top:0px;
+	position:absolute;
+	border:groove;
+}
+#button2{
+	width:200px;
+	height:200px;
+	background:url(walker.jpg);
+	background-position:bottom;
+	margin-left:100px;
+	margin-top:250px;
+	position:absolute;
+	border:groove;
+}
+#button3{
+	width:200px;
+	height:200px;
+	background:url(snow.gif);
+	background-position:left;
+	margin-left:100px;
+	margin-top:500px;
+	position:absolute;
+	border:groove;
+}
+
+#button1:hover{
+	transform:scale(0.8,0.8)
+	
+	}
+#button2:hover{
+	transform:scale(0.8,0.8)
+	
+	}
+#button3:hover{
+	transform:scale(0.8,0.8)
+	
+	}
+	
+#snow{
+	background:url(snow.gif);
+	margin-left:600px;
+	margin-top:150px;
+	width:540px;
+	height:540px;
+	position:fixed;
+}
+</style>
+</head>
+
+
+<body>
+<form id="form1" name="form1" method:"post" action="index.html" >
+	<input  type="submit" name="button" id="button1" value="" / >
+</form>
+<form id="form2" name="form2" method:"post" action="walkers.html" >
+	<input  type="submit" name="button" id="button2" value="" / >
+</form>
+<form id="form3" name="form3" method:"post" action="snow.html" >
+	<input  type="submit" name="button" id="button3" value="" / >
+</form>
+
+<canvas id="snow" width="540px" height="540px" style="border:1px solid #000000;">
+
+<script>
+var ctx = document.getElementById("snow").getContext('2d');
+var height = 540;
+var width = 540;
+var points = [];
+var numPoints = 50;
+
+
+
+var wrap = function(point) {
+  if (point.x >width) {
+    point.x = 0;
+    point.y = point.y-1;
+  }
+  if (point.x<60){
+	  point.y=point.y-1;}
+if (point.x<20){
+	point.y=point.y-0.1;}
+	  
+  if (point.y > height) {
+    point.y = height;
+	point.x = point.x+10;
+  }
+  if (point.y < height-25) {
+    point.y = height;
+	point.x = point.x+15
+	
+  }
+/*if (20<point.x<70){
+	poiny.y =poni.y+1;
+	}*/
+};
+var move = function(p) {
+  var speed = p.speed;
+  var direction = Math.random();
+  if (direction < 0.7) { // move up 
+   
+	p.y = p.y - speed;
+  } else if (direction <0.8) {
+     p.x = p.x- speed;
+  } else if (direction < 0.90) {
+    p.y = p.y + speed;
+  } else {
+    p.x= p.x + speed;
+  }
+}
+
+var makeColor = function(hue, sat, light, alph) {
+  return "hsla(" + hue + "," + sat + "%," + light + "%," + alph + ")";
+};
+var drawPoints = function() {
+  
+
+  ctx.strokeStyle = '';
+
+  for (var i = 0; i < points.length; i++) {
+    var point = points[i];
+    var hue = point.y * 20;
+
+	move(point);
+    wrap(point);
+    ctx.fillStyle = makeColor(hue, 100,100, 1);
+    ctx.fillRect(point.x, point.y, point.size, point.size);
+  }
+  requestAnimationFrame(drawPoints);
+};
+
+var makePoints = function() {
+  for (var i = 0; i < numPoints; i++) {
+    var size = Math.random() * 5;
+    var x = Math.random() * width;
+    var speed = 10-size;
+    points.push({
+      x: x,
+      y: height,
+      size: size,
+      speed: speed
+    });
+  }
+};
+
+makePoints();
+requestAnimationFrame(drawPoints);
+</script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Walkers</title>
+<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+
+<style media="screen">
+body{
+	font-family: 'Anton', sans-serif;
+	background:#CCF;
+	font-weight:bold;
+	}
+#button1{
+	width:200px;
+	height:200px;
+	background:url(lala.jpg);
+	background-position:top;
+	margin-left:100px;
+	margin-top:0px;
+	position:absolute;
+	border:groove;
+}
+#button2{
+	width:200px;
+	height:200px;
+	background:url(walker.jpg);
+	background-position:bottom;
+	margin-left:100px;
+	margin-top:250px;
+	position:absolute;
+	border:groove;
+}
+#button3{
+	width:200px;
+	height:200px;
+	background:url(snow.gif);
+	background-position:left;
+	margin-left:100px;
+	margin-top:500px;
+	position:absolute;
+	border:groove;
+}
+
+#button1:hover{
+	transform:scale(0.8,0.8)
+	
+	}
+#button2:hover{
+	transform:scale(0.8,0.8)
+	
+	}
+#button3:hover{
+	transform:scale(0.8,0.8)
+	
+	}
+	
+#canvas{
+	background:#E2D1E9;
+	margin-left:600px;
+	margin-top:150px;
+	width:400px;
+	height:400px;
+	position:fixed;
+}
+</style>
+</head>
+
+
+
+<body>
+<form id="form1" name="form1" method:"post" action="index.html" >
+	<input  type="submit" name="button" id="button1" value="" / >
+</form>
+<form id="form2" name="form2" method:"post" action="walkers.html" >
+	<input  type="submit" name="button" id="button2" value="" / >
+</form>
+<form id="form3" name="form3" method:"post" action="snow.html" >
+	<input  type="submit" name="button" id="button3" value="" / >
+</form>
+
+<canvas id="canvas" width="400px" height="400px" style="border:1px solid #000000;">
+
+</canvas>
+
+<script src="walkers.js"></script>
+</body>
+</html>
