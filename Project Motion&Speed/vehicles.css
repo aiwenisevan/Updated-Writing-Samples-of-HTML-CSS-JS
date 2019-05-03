@@ -1,0 +1,67 @@
+@charset "utf-8";
+#car1{
+	margin-top:100px;
+	position:fixed;
+	
+	
+	}
+	p1{
+		margin-top:210px;
+		
+		position:fixed;
+		
+	}
+	p2{
+		margin-top:210px;
+		margin-left:460px;
+		position:fixed;
+		
+	}
+	p3{
+		margin-top:210px;
+		margin-left:760px;
+		position:fixed;
+		
+	}
+	#car2{
+	margin-top:400px;
+	position:fixed;
+	
+	
+	}
+	button{
+		background:#FFF;
+		
+	}
+	#bear1{
+		margin-top:100px;
+		margin-left:1000px;
+		position:fixed;
+	}
+	#bear2{
+		margin-top:400px;
+		margin-left:1000px;
+		position:fixed;
+	}
+	p4{
+		margin-top:510px;
+		margin-left:10px;
+		position:fixed;
+		
+	}
+	p5{
+		margin-top:510px;
+		margin-left:460px;
+		position:fixed;
+		
+	}
+	p6{
+		margin-top:510px;
+		margin-left:760px;
+		position:fixed;
+		
+	}
+	a{
+		text-decoration:none;
+	}
+
