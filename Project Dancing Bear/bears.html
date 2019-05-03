@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Homework 7</title>
+<embed src="KANAN-要不要突然去掀女孩子的裙子呢.mp3" width="270" height="70">
+<link type="text/css" href="index.css" rel="stylesheet"/>
+<style = media>
+	#canvas{
+		margin-left:200px;
+		position:fixed;
+		background:none;
+	}
+	body{
+		background:#CCC;
+		text-align:center;
+	}
+	embed{
+		margin-left:10px;
+		position:fixed
+	}
+	
+    </style>
+</head>
+
+<body> 
+	<div class="ribbon">
+    <a href="index.html"><span>Home</span></a>
+    <a href="bears.html"><span>Bears</span></a>
+    <a href="kitty.html"><span>Kitty</span></a>
+    </div>
+    
+    
+   
+	<canvas id="bears" width="1500" height="600"></canvas>
+    <h2>Dancing Bears!</h2>
+    <p>Use "↑""↓""←""→"and"space" to see a dancing bear! First,Move to anywhere you wanna dance on the screen! Second, press "←"　"→" to see a rocking bear! Then, Try other directions!<br />
+    Tips:You may press four directions together and fast.</p>
+    
+     <script>  
+
+	
+  	var myCanvas = document.getElementById("bears");
+	var ctx = myCanvas.getContext('2d');
+	
+  	var LEFT=37,UP=38,RIGHT=39,DOWN=40,SPACE=32;  
+	var isKeyDown=false;  
+	var speed=10;  
+	var ctx;  
+	var sx=[0,200,400],sy=[0,200,400,600,800];  
+	var sWidth=200,sHeight=200;  
+	var x=300,y=300;  
+	var dx=100,dy=100;  
+	var s={  
+    	Back:[[0,0],[1,0],[2,0]],
+    	Left:[[0,1],[1,1],[2,1]],
+    	Front:[[0,2],[1,2],[2,2]],
+    	Right:[[0,3],[1,3],[2,3]],
+		Jump: [[0,4],[1,4],[2,4]]
+	}
+	var i=1;  
+	var c=s.Front;  
+	var img=new Image();
+	img.src="bears5.png";
+	
+	var draw=function(){  
+    ctx.clearRect(0,0,1500,600);
+    ctx.drawImage(img,sx[c[i][0]],sy[c[i][1]],sWidth,sHeight,x-dx,y-dy,200,200);
+	};
+	
+	document.onkeydown=function (e){  
+    isKeyDown=true;
+    if(e.keyCode===UP){
+        c=s.Back;
+        y-=speed;
+    }
+    if(e.keyCode===DOWN){
+        c=s.Front;
+        y+=speed;
+    }
+    if(e.keyCode===LEFT){
+        c=s.Left;
+        x-=speed;
+    }
+    if(e.keyCode===RIGHT){
+        c=s.Right;
+        x+=speed;
+    }
+	 if(e.keyCode===SPACE){
+        c=s.Jump;
+        x+=speed;
+    }
+	};
+	document.onkeyup=function(e){  
+    isKeyDown=false;
+    i=1;
+    draw();
+	};
+	
+	
+	
+	
+	window.onload=function(){  
+   
+    setInterval(draw,1000/30);
+    setInterval(function(){
+        if(isKeyDown){
+            i+=2;
+            if(i>2)i=0;
+        	}
+    	},500);
+	}; 
+	
+	</script>
+	
+</body>
+</html>
